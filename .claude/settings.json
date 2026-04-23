@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f notes/Memory.md ] || (mkdir -p notes && git fetch origin notes/main 2>/dev/null && git show origin/notes/main:notes/Memory.md > notes/Memory.md && echo 'Memory.md を notes/main から取得しました')"
+          }
+        ]
+      }
+    ]
+  }
+}
